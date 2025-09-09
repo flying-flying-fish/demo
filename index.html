@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <script>
+
+
+        
         // 微信浏览器工具条隐藏解决方案
         document.addEventListener('DOMContentLoaded', function() {
+
+              document.body.addEventListener('touchmove', function (e) {
+              e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+           }, {passive: false}); //passive 参数不能省略，用来兼容ios和android
+
+            
             // 方案1：使用微信JSBridge隐藏工具栏（推荐）
             // if (typeof WeixinJSBridge !== 'undefined') {
             //     WeixinJSBridge.call('hideToolbar');
