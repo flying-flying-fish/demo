@@ -6,15 +6,15 @@
     <script>
         // 微信浏览器工具条隐藏解决方案
         document.addEventListener('DOMContentLoaded', function() {
-            // 方案1：使用微信JSBridge隐藏工具栏（推荐）
-            if (typeof WeixinJSBridge !== 'undefined') {
+            // // 方案1：使用微信JSBridge隐藏工具栏（推荐）
+            // if (typeof WeixinJSBridge !== 'undefined') {
                 
-                WeixinJSBridge.call('hideToolbar');
-            } else {
-                document.addEventListener('WeixinJSBridgeReady', function() {
-                    WeixinJSBridge.call('hideToolbar');
-                });
-            }
+            //     WeixinJSBridge.call('hideToolbar');
+            // } else {
+            //     document.addEventListener('WeixinJSBridgeReady', function() {
+            //         WeixinJSBridge.call('hideToolbar');
+            //     });
+            // }
             
             // 方案2：拦截链接点击使用replace方法（防止历史记录）
             // document.querySelectorAll('a.link-button').forEach(function(link) {
@@ -37,6 +37,11 @@
         }
         
         body {
+            position: fiexd;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
