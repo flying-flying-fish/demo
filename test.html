@@ -6,17 +6,33 @@
     <script>
         // 微信浏览器工具条隐藏解决方案
         document.addEventListener('DOMContentLoaded', function() {
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+              document.body.addEventListener('touchmove', function (e) {
+                  
+              e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+           }, {passive: false}); //passive 参数不能省略，用来兼容ios和android
+
+            // 内容区域允许滚动
+const contentArea = document.getElementById('container');
+contentArea.addEventListener('touchmove', function(e) {
+  e.stopPropagation(); // 阻止事件冒泡到body的监听器
+}, { passive: false });
+
+
+            
             // // 方案1：使用微信JSBridge隐藏工具栏（推荐）
-            if (typeof WeixinJSBridge !== 'undefined') {
-                  alert("调用1");
-                WeixinJSBridge.call('hideToolbar');
+            // if (typeof WeixinJSBridge !== 'undefined') {
+            //       alert("调用1");
+            //     WeixinJSBridge.call('hideToolbar');
                 
-            } else {
-                document.addEventListener('WeixinJSBridgeReady', function() {
-                    alert("调用2");
-                    WeixinJSBridge.call('hideToolbar');
-                });
-            }
+            // } else {
+            //     document.addEventListener('WeixinJSBridgeReady', function() {
+            //         alert("调用2");
+            //         WeixinJSBridge.call('hideToolbar');
+            //     });
+            // }
             
             // 方案2：拦截链接点击使用replace方法（防止历史记录）
             // document.querySelectorAll('a.link-button').forEach(function(link) {
