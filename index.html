@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页导航示例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .link-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2575fc;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .link-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #eaeaea;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(37, 117, 252, 0.2);
+            border-color: #2575fc;
+        }
+        
+        .link-card h3 {
+            color: #2575fc;
+            margin-bottom: 10px;
+        }
+        
+        .link-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .link-button {
+            display: inline-block;
+            background: #2575fc;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .link-button:hover {
+            background: #1c5dc1;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            color: #666;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        @media (max-width: 768px) {
+            .link-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>网页导航示例</h1>
+            <p class="subtitle">点击下方链接访问不同网站</p>
+        </header>
+        
+        <section class="link-section">
+            <h2>常用网站</h2>
+            <div class="link-grid">
+                <div class="link-card">
+                    <h3>搜索引擎</h3>
+                    <p>全球最大的搜索引擎，提供网页、图片、视频等多种搜索服务</p>
+                    <a href="https://www.google.com" class="link-button" target="_blank">访问 Google</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>技术社区</h3>
+                    <p>全球知名的开发者社区，提供编程问答和技术文章</p>
+                    <a href="https://stackoverflow.com" class="link-button" target="_blank">访问 Stack Overflow</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>代码托管</h3>
+                    <p>全球最大的代码托管平台，支持Git版本控制</p>
+                    <a href="https://github.com" class="link-button" target="_blank">访问 GitHub</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="link-section">
+            <h2>学习资源</h2>
+            <div class="link-grid">
+                <div class="link-card">
+                    <h3>免费编程课程</h3>
+                    <p>提供免费编程课程，涵盖多种编程语言和技术</p>
+                    <a href="https://www.freecodecamp.org" class="link-button" target="_blank">访问 freeCodeCamp</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>开发文档</h3>
+                    <p>提供各种Web技术的详细文档和教程</p>
+                    <a href="https://developer.mozilla.org" class="link-button" target="_blank">访问 MDN Web Docs</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3>在线学习</h3>
+                    <p>提供计算机科学和编程的在线课程</p>
+                    <a href="https://www.coursera.org" class="link-button" target="_blank">访问 Coursera</a>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2025 网页导航示例 | 使用HTML和CSS构建</p>
+        </footer>
+    </div>
+</body>
+</html>
