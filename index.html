@@ -11,8 +11,12 @@
         document.addEventListener('DOMContentLoaded', function() {
 
               document.body.addEventListener('touchmove', function (e) {
+                  
               e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
            }, {passive: false}); //passive 参数不能省略，用来兼容ios和android
+
+
+           
 
 
             // 内容区域允许滚动
@@ -165,7 +169,7 @@ contentArea.addEventListener('touchmove', function(e) {
     </style>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <header>
             <h1>网页导航示例1</h1>
             <p class="subtitle">点击下方链接访问不同网站</p>
