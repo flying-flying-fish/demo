@@ -7,13 +7,13 @@
         // 微信浏览器工具条隐藏解决方案
         document.addEventListener('DOMContentLoaded', function() {
             // 方案1：使用微信JSBridge隐藏工具栏（推荐）
-            if (typeof WeixinJSBridge !== 'undefined') {
-                WeixinJSBridge.call('hideToolbar');
-            } else {
-                document.addEventListener('WeixinJSBridgeReady', function() {
-                    WeixinJSBridge.call('hideToolbar');
-                });
-            }
+            // if (typeof WeixinJSBridge !== 'undefined') {
+            //     WeixinJSBridge.call('hideToolbar');
+            // } else {
+            //     document.addEventListener('WeixinJSBridgeReady', function() {
+            //         WeixinJSBridge.call('hideToolbar');
+            //     });
+            // }
             
             // 方案2：拦截链接点击使用replace方法（防止历史记录）
             document.querySelectorAll('a.link-button').forEach(function(link) {
